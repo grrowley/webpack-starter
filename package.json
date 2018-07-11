@@ -2,14 +2,20 @@
   "name": "front-end-webpack",
   "version": "1.0.0",
   "description": "",
-  "main": "project.js",
+  "main": "_webpack.js",
   "scripts": {
-    "dev": "rimraf dist/ && webpack --config _webpack.js"
+    "dev": "webpack --mode development --config _webpack.js --watch",
+    "dist": "webpack --mode production --config _webpack.js",
+    "clean": "rimraf dist/"
   },
   "author": "Grant R. Rowley",
   "license": "ISC",
   "devDependencies": {
+    "babel-loader": "^7.1.5",
+    "browser-sync": "^2.24.5",
+    "browser-sync-webpack-plugin": "^2.2.2",
     "file-loader": "^1.1.11",
+    "image-webpack-loader": "^4.3.1",
     "node-sass": "^4.9.2",
     "pug": "^2.0.3",
     "pug-html-loader": "^1.1.5",
@@ -17,7 +23,8 @@
     "rimraf": "^2.6.2",
     "sass-loader": "^7.0.3",
     "webpack": "^4.15.1",
-    "webpack-cli": "^3.0.8"
+    "webpack-cli": "^3.0.8",
+    "webpack-concat-plugin": "^3.0.0"
   },
   "dependencies": {}
 }
