@@ -5,8 +5,7 @@
   "main": "_webpack.js",
   "scripts": {
     "dev": "webpack --mode development --config _webpack.js --watch",
-    "dist": "webpack --mode production --config _webpack.js",
-    "clean": "rimraf dist/"
+    "dist": "webpack --mode production --config _webpack.js"
   },
   "author": "Grant R. Rowley",
   "license": "ISC",
